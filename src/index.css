@@ -1,0 +1,518 @@
+/*======== Common CSS Start ========*/
+/* @font-face {
+  font-family: inter;
+  src: url(../fonts/Inter-VariableFont_opsz\,wght.ttf);
+} */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: inter, sans-serif;
+}
+:root {
+  --primary-color: #9E7777;
+  --primary-color-lowOpacity: rgba(89, 86, 232, 0.05);
+  --primary-color-stroke: #E3E3E3;
+  --primary-color-para: #646464;
+  --primary-color-dots: #E6E6E6;
+  --primary-color-star: #ffb300;
+  --primary-color-quote: #F5E8C7;
+  --primary-color-footer: #DEBA9D;
+  --primary-color-faIcon: #337FFF;
+  --primary-color-instaIcon: #B029A3;
+  --primary-color-black: #000000;
+  --primary-color-white: #ffffff;
+}
+.container {
+  width: 1168px;
+  margin: 0 auto;
+}
+li {
+  list-style-type: none;
+}
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+img {
+  vertical-align: middle;
+}
+.cmn_para {
+  font-size: 16px;
+  color: var(--primary-color-para);
+  line-height: 27px;
+}
+.section_title {
+  width: 520px;
+  margin: 0 auto 50px auto;
+}
+.section_title h2 {
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.section_title p {
+  text-align: center;
+}
+/*======== Common CSS End ========*/
+
+/* ========== Nav CSS Start ========== */
+#nav_bar {
+  margin-top: 20px;
+}
+#nav_bar .main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#nav_bar .main ul {
+  display: flex;
+}
+#nav_bar .main .logo {
+  width: 150px;
+  height: auto;
+}
+nav#nav_bar .main .logo img {
+  width: 100%;
+}
+#nav_bar .main .nav_link_text a {
+  padding: 13px 20px;
+  border-radius: 10px;
+  color: var(--primary-color-black);
+  font-size: 18px;
+  z-index: 1;
+
+}
+#nav_bar .main .nav_item a {
+  position: relative;
+  transition: .4s;
+}
+#nav_bar .main .nav_item a:hover {
+  color: var(--primary-color);
+}
+#nav_bar .main .nav_item a::after {
+  content: '';
+  width: 5px;
+  height: 5px;
+  background: var(--primary-color);
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%);
+  z-index: -1;
+  opacity: 0;
+  transition: .4s;
+}
+#nav_bar .main .nav_item a:hover::after {
+  opacity: 1;
+  bottom: 3px;
+}
+#nav_bar .main .menu_button a {
+  background-color: var(--primary-color);
+  color: var(--primary-color-white);
+}
+.active {
+  color: var(--primary-color) !important;
+}
+.active::after {
+  opacity: 1 !important;
+  bottom: 3px !important;
+}
+/* ========== Nav CSS End ========== */
+
+/* ========== Hero CSS Start ========== */
+#hero {
+  background-color: var(--primary-color);
+  padding: 182px 0;
+  margin-top: 20px;
+}
+#hero .main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#hero .main .banner_text {
+  width: 50%;
+}
+#hero .main .banner_img {
+  width: 50%;
+}
+#hero .main .banner_img img {
+  width: 100%;
+}
+#hero h1 {
+  color: white;
+  font-size: 65px;
+  line-height: 80px;
+}
+#hero .cmn_para {
+  color: white;
+  margin-top: 25px;
+}
+#hero a {
+  background-color: white;
+  padding: 13px 22px;
+  color: var(--primary-color);
+  border-radius: 10px;
+  font-size: 18px;
+  margin-top: 30px;
+}
+#hero .banner_img {
+  text-align: right;
+}
+/* ========== Hero CSS End ========== */
+
+/* ========== Services CSS Start ========== */
+#services {
+  margin-top: 100px;
+}
+#services .main {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+#services .main .item {
+  width: 31.5%;
+  padding: 63px 48px;
+  border-radius: 10px;
+  border: 1px solid var(--primary-color-stroke);
+  margin-bottom: 33px;
+}
+#services .main .item i{
+  width: 71px;
+  height: 71px;
+  text-align: center;
+  font-size: 37px;
+  padding: 17px;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  border-radius: 10px;
+  margin-bottom: 30px;
+  transition: .4s;
+}
+#services .main .item h3{
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+#services .main .item:hover {
+  border: 1px solid transparent;
+  box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.1);
+}
+#services .main .item:hover i {
+  background-color: var(--primary-color);
+  color: white;
+}
+/* ========== Services CSS End ========== */
+
+/* ========== Portfolio CSS Start ========== */
+#portfolio {
+  margin-top: 67px;
+}
+#portfolio ul {
+  background-color: var(--primary-color-lowOpacity);
+  width: 800px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 23px 64px;
+  border-radius: 10px;
+}
+#portfolio ul li a{
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--primary-color-black);
+  position: relative;
+}
+#portfolio ul li a::before{
+  content: '';
+  width: 0;
+  height: 5px;
+  background: var(--primary-color);
+  position: absolute;
+  top: -23px;
+  left: 0;
+  transition: .4s;
+}
+#portfolio ul li a:hover::before{
+  width: 100%;
+}
+#portfolio .main {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  flex-wrap: wrap;
+}
+#portfolio .main .item {
+  width: 23%;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 30px;
+}
+#portfolio .main .item img {
+  width: 100%;
+  display: block;
+}
+#portfolio .main .item .overlay {
+  background-color: var(--primary-color);
+  width: 85%;
+  position: absolute;
+  left: 50%;
+  bottom: -115px;
+  transform: translateX(-50%);
+  padding: 25px 40px;
+  border-radius: 10px;
+  opacity: 0;
+  transition: .4s;
+}
+#portfolio .main .item:hover .overlay {
+  opacity: 1;
+  bottom: 20px;
+}
+.overlay h2 {
+  font-size: 20px;
+  line-height: 27px;
+  font-weight: 600;
+  color: var(--primary-color-white);
+  margin-bottom: 10px;
+}
+.overlay a {
+  font-size: 16px;
+  line-height: 27px;
+  color: var(--primary-color-white);
+}
+.overlay a span {
+  margin-right: 10px;
+}
+/* ========== Portfolio CSS End ========== */
+
+/* ========== Team CSS Start ========== */
+#team {
+  margin-top: 70px;
+}
+#team .main {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+#team .main .item {
+  width: 31.5%;
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px;
+}
+#team .main .item img {
+  width: 100%;
+  display: block;
+}
+#team .main .item .overlay_team {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 50%;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), #6F4C5B);
+}
+.overlay_team_text {
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  bottom: 35px;
+  transform: translateX(-50%);
+  text-align: center;
+  color: var(--primary-color-white);
+  padding: 5px;
+}
+.overlay_team_text h2 {
+  font-size: 20px;
+  line-height: 27px;
+  font-weight: 600;
+}
+.overlay_team_text p {
+  font-size: 16px;
+  line-height: 27px;
+}
+.team_carosal_dot {
+  width: 100%;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 25px;
+}
+.team_carosal_dot .dots {
+  width: 10px;
+  height: 10px;
+  background-color: var(--primary-color-dots);
+  border-radius: 50%;
+  margin: 5px;
+}
+.team_carosal_dot .active {
+  background-color: var(--primary-color);
+}
+/* ========== Team CSS End ========== */
+
+/* ========== CustomerExperience CSS Start ========== */
+#customerExperience {
+  margin-top: 100px;
+}
+#customerExperience .main {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+#customerExperience .main .item {
+  width: 31.5%;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 48px;
+  box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.1);
+  position: relative;
+}
+#customerExperience .main .item img {
+  width: 83px;
+  height: 83px;
+  border-radius: 50%;
+  margin-bottom: 30px;
+}
+#customerExperience .main .item .customer_rating i {
+  font-size: 20px;
+  color: var(--primary-color-star);
+}
+#customerExperience .main .item .customer_rating {
+  margin-bottom: 20px;
+}
+#customerExperience .main .item h2 {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 27px;
+  margin-top: 15px;
+}
+#customerExperience .main .item p {
+  font-size: 16px;
+  line-height: 27px;
+  color: var(--primary-color-para);
+}
+#customerExperience .section_title {
+  width: 580px !important;
+  margin: 0 0 50px 0;
+}
+#customerExperience .section_title h2 {
+  text-align: left !important;
+}
+#customerExperience .section_title p {
+  text-align: left;
+}
+#customerExperience .main .item .quoteIcon {
+  position: absolute;
+  right: 30px;
+  bottom: 25px;
+  font-size: 64px;
+  color: var(--primary-color-quote);
+}
+/* ========== CustomerExperience CSS End ========== */
+
+/* ========== News CSS Start ========== */
+#news {
+  margin-top: 100px;
+}
+#news .main {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+#news .main .item {
+  width: 31.5%;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 20px 20px 45px 20px;
+  border: 1px solid var(--primary-color-stroke);
+}
+#news .main .item img {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+#news .main .item span {
+  font-size: 16px;
+  color: var(--primary-color-para);
+  margin-right: 30px;
+}
+#news .main .item span i {
+  font-size: 18px !important;
+  margin-right: 5px;
+}
+#news .main .item h2 {
+  width: 230px;
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+#news .main .item a {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-top: 10px;
+}
+/* ========== News CSS End ========== */
+
+/* ========== Footer CSS Start ========== */
+#footer {
+  background-color: var(--primary-color-footer);
+  margin-top: 100px;
+}
+#footer .main {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 100px 0;
+}
+#footer .main .branding_creative {
+  width: 300px;
+}
+#footer .main .branding_creative img {
+  margin-bottom: 15px;
+  width: 60%;
+  margin-top: -40px;
+}
+#footer .main .branding_creative p {
+  margin-bottom: 20px;
+}
+#footer .main .branding_creative a {
+  width: 42px;
+  height: 42px;
+  background-color: var(--primary-color-white);
+  border-radius: 50%;
+  margin-right: 15px;
+  position: relative;
+}
+#footer .main .branding_creative i {
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+i.fa-brands.fa-facebook-f {
+  color: var(--primary-color-faIcon);
+}
+i.fa-brands.fa-x-twitter {
+  color: var(--primary-color-black);
+}
+i.fa-brands.fa-instagram {
+  color: var(--primary-color-instaIcon);
+}
+#footer .main .company_links h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+#footer .main .company_links a {
+  display: block;
+  line-height: 35px;
+  color: #333;
+}
+/* ========== Footer CSS End ========== */
